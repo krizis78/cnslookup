@@ -5,6 +5,7 @@ export class Web3DNS{
  config(){return this.request('config');} health(){return this.request('health');}
  search(name){return this.request('search?'+new URLSearchParams({name}));}
  resolve(name){return this.request('resolve?'+new URLSearchParams({name}));}
+ resolveMany(names){return this.request('resolve/batch?'+new URLSearchParams({names:[].concat(names).join(',')}));}
  reverse(address){return this.request('reverse?'+new URLSearchParams({address}));}
  session(){return this.request('auth/session');} domains(){return this.request('domains');} status(){return this.request('status');}
  async login(address,signMessage){const {message}=await this.request('auth/challenge',{address});const signature=await signMessage(message);return this.request('auth/verify',{signature});}

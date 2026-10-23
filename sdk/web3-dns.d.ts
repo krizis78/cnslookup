@@ -14,7 +14,7 @@ export class Web3DNS {
  request<T=unknown>(path:string,body?:unknown):Promise<T>;
  config():Promise<{chainId:number;registryVersion:1|2;revision?:number;registryReady:boolean;signerReady:boolean;wrapperReady:boolean;chainName:string;registry:string;wrapper:string;wrapperAddress?:string;legacyRegistry:string;registrationEnabled:boolean;paused?:boolean;siteSigner?:string;registrationFee?:string;rpc:boolean;block?:number;explorer:string;gateway:string;readinessError?:string}>;
  health():Promise<{ok:boolean;service:string;mode:string;registrationEnabled:boolean}>;
- search(name:string):Promise<Domain>;resolve(name:string):Promise<Domain>;reverse(address:string):Promise<{name:string|null;address:string;registry?:string}>;
+ search(name:string):Promise<Domain>;resolve(name:string):Promise<Domain>;resolveMany(names:string|string[]):Promise<{results:Array<Domain&{query:string;error?:string}>}>;reverse(address:string):Promise<{name:string|null;address:string;registry?:string}>;
  session():Promise<{session:{address:string;expires:number}|null;isAdmin:boolean}>;domains():Promise<{domains:Domain[];errors:string[]}>;status():Promise<Record<string,unknown>>;
  login(address:string,signMessage:(message:string)=>Promise<string>):Promise<{address:string;isAdmin:boolean;storage:Storage}>;logout():Promise<{ok:boolean}>;
  dnsChallenge(name:string):Promise<{name:string;host:string;value:string;expires:number}>;

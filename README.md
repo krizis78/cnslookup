@@ -75,12 +75,14 @@ The same data is available without MCP:
 - **REST API:** `https://www.cnslookup.com/api/v1`. The [OpenAPI 3.1 spec](https://www.cnslookup.com/api/openapi) documents every route.
   ```bash
   curl "https://www.cnslookup.com/api/v1/payee?to=example.com&network=BASE"
+  curl "https://www.cnslookup.com/api/v1/resolve/batch?names=test.cns,example.com"   # up to 20 names at once
   ```
 - **JavaScript SDK:** [`sdk/web3-dns.mjs`](sdk/web3-dns.mjs), an ES module with no dependencies, with types in [`sdk/web3-dns.d.ts`](sdk/web3-dns.d.ts). It is also served at `https://www.cnslookup.com/sdk/web3-dns.mjs`.
   ```js
   import {Web3DNS} from './sdk/web3-dns.mjs';
   const dns = new Web3DNS({baseUrl: 'https://www.cnslookup.com'});
   const payee = await dns.payee('example.com', 'BASE');
+  const {results} = await dns.resolveMany(['test.cns', 'example.com']);
   ```
 
 ## Pay button
