@@ -1,0 +1,4 @@
+.claude-flow/
+.claude/
+.env*
+node_modules/

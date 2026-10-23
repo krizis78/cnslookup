@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.cnslookup/web3-dns",
+  "title": "Web3 DNS (CNSLookup)",
+  "description": "Read-only lookup of verified crypto wallet addresses for domains, .cns and ENS names.",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.cnslookup.com/developers/mcp",
+  "repository": {
+    "url": "https://github.com/krizis78/cnslookup",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.cnslookup.com/mcp"
+    }
+  ]
+}
