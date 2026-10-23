@@ -83,6 +83,18 @@ The same data is available without MCP:
   const payee = await dns.payee('example.com', 'BASE');
   ```
 
+## Pay button
+
+Let people pay your name from a website, a README or a bio. The button opens a pay page that reads the verified address from the on-chain record right before each payment.
+
+[![Pay with crypto to test.cns](https://www.cnslookup.com/button/test.cns.svg?label=pay&theme=dark)](https://www.cnslookup.com/pay/test.cns)
+
+```markdown
+[![Pay with crypto to test.cns](https://www.cnslookup.com/button/test.cns.svg?label=pay&theme=dark)](https://www.cnslookup.com/pay/test.cns)
+```
+
+`test.cns` is a demo name on the testnet registry. Make a button for your own name, with the "Tip me" or "Donate" text and a light or dark style, at https://www.cnslookup.com/tools/pay-button.
+
 ## MCP Registry
 
 [`server.json`](server.json) is the manifest for the official MCP Registry. Its registry name is `com.cnslookup/web3-dns`.
