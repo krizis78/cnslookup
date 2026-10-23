@@ -85,7 +85,7 @@ The same data is available without MCP:
 
 ## MCP Registry
 
-[`server.json`](server.json) is the manifest for the official MCP Registry. The server is listed as `com.cnslookup/web3-dns`.
+[`server.json`](server.json) is the manifest for the official MCP Registry. Its registry name is `com.cnslookup/web3-dns`.
 
 ## Links
 
